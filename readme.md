@@ -1,4 +1,4 @@
-# CBN ECM AND FIAPS IN JAVA
+# CBN PAPERLITE AND FIAPS IN JAVA
 
 ## build and deploy local
 rm -rf "C:/xampp/tomcat/webapps/ECM6/" && mvn clean && mvn package && cp "C:/Users/Administrator/IdeaProjects/ECM4/target/ECM4-1.0-SNAPSHOT.war" "C:/xampp/tomcat/webapps/ECM6.war"
@@ -6,10 +6,11 @@ rm -rf "C:/xampp/tomcat/webapps/ECM6/" && mvn clean && mvn package && cp "C:/Use
 ## Custom Config Files Location
 *Windows*
 `C:\dev1kit\paperlite\`
+Or leave blank in the GlobalFunctions class (app_config_dir) to utilize the internal settings
 
 *Linux*
 `/var/lib/dev1kit/paperlite/`
-
+Or leave blank in the GlobalFunctions class (app_config_dir_linux) to utilize the internal settings
 
 ## foreach loop
 for( Object status_update_table : status_updates.names() ){  
