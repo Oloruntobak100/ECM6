@@ -1,15 +1,29 @@
-# CBN ECM AND FIAPS IN JAVA
+# CBN PAPERLITE AND FIAPS IN JAVA
 
 ## build and deploy local
 rm -rf "C:/xampp/tomcat/webapps/ECM6/" && mvn clean && mvn package && cp "C:/Users/Administrator/IdeaProjects/ECM4/target/ECM4-1.0-SNAPSHOT.war" "C:/xampp/tomcat/webapps/ECM6.war"
+Or
+install and configure system environment for java 21
+Install Apache Maven 3.9.6
+Set up Environment Variables for MAVEN
+Install and setup Express edition of SQL Server 2019 and download SQL Management Studio 18/19 or Connect
+to an existing database through the config.json
+Install Apache Tomcat version 9
+Clone/Pull the ECM repo from GitHub
+Generating the WAR file using:
+On the CMD window/Linux terminal, navigate to the directory of the ECM repo on the App Server
+Run mvn clean
+Run mvn package: This will generate an ECM6-2.war file in the target folder of the ECM repo on the App Server
+
 
 ## Custom Config Files Location
 *Windows*
 `C:\dev1kit\paperlite\`
+Or leave blank in the GlobalFunctions class (app_config_dir) to utilize the internal settings
 
 *Linux*
 `/var/lib/dev1kit/paperlite/`
-
+Or leave blank in the GlobalFunctions class (app_config_dir_linux) to utilize the internal settings
 
 ## foreach loop
 for( Object status_update_table : status_updates.names() ){  
