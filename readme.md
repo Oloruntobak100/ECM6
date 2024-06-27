@@ -1,91 +1,82 @@
-# CBN ECM AND FIAPS IN JAVA
-
-## build and deploy local
+CBN PAPERLITE AND FIAPS IN JAVA
+build and deploy local
 rm -rf "C:/xampp/tomcat/webapps/ECM6/" && mvn clean && mvn package && cp "C:/Users/Administrator/IdeaProjects/ECM4/target/ECM4-1.0-SNAPSHOT.war" "C:/xampp/tomcat/webapps/ECM6.war"
 
-## Custom Config Files Location
-*Windows*
-`C:\dev1kit\paperlite\`
+Custom Config Files Location
+Windows C:\dev1kit\paperlite\ Or leave blank in the GlobalFunctions class (app_config_dir) to utilize the internal settings
 
-*Linux*
-`/var/lib/dev1kit/paperlite/`
+Linux /var/lib/dev1kit/paperlite/ Or leave blank in the GlobalFunctions class (app_config_dir_linux) to utilize the internal settings
 
+foreach loop
+for( Object status_update_table : status_updates.names() ){
+JSONObject jv = status_updates.getJSONObject( status_update_table.toString() );
+}
 
-## foreach loop
-for( Object status_update_table : status_updates.names() ){  
-	JSONObject jv = status_updates.getJSONObject( status_update_table.toString() );  
-}  
-
-## Recent Updates
-### 02-jun-23 
-Grade Level Field enabled on users table  
+Recent Updates
+02-jun-23
+Grade Level Field enabled on users table
 Cash advance kilometer chart, rate & grade level table added
 
-**TOOLS: IntelliJ IDEA, Active Directory, JAVA, Maven, dev1kit.com, Tomcat and MS SQL Database**
+TOOLS: IntelliJ IDEA, Active Directory, JAVA, Maven, dev1kit.com, Tomcat and MS SQL Database
 
-## Project Scope based on Award Letter
-**PHASE 1**
-- Rebuild and Stabilization of 14 FIAPS Processes in PHP
-- Development of Web Portal for Submission of Documents for the 14 FIAPS Processes
+Project Scope based on Award Letter
+PHASE 1
 
+Rebuild and Stabilization of 14 FIAPS Processes in PHP
+Development of Web Portal for Submission of Documents for the 14 FIAPS Processes
+PHASE 2
 
-**PHASE 2**
-- Development of 23 ECM Processes in JAVA
-- Translation of the 14 FIAPS Processes from PHP to JAVA
+Development of 23 ECM Processes in JAVA
+Translation of the 14 FIAPS Processes from PHP to JAVA
+Work Done
+PHASE 1
+Renewal of License
+Change External Auditor
+Change of Name
+Equity Investment
+Board & Management
+Org. Structure
+Shares Transfer
+Share Capital
+Branch Expansion
+Penalties & Sanction
+Black Book
+Black Book Delisting
+Black Book Miscellaneous
+Annual Report
+License
+Registration
+Examination Report Library
+Request for Download
+PHASE 2: ECM 23 Processes
+LITIGATION SUPPORT
 
-## Work Done
-### PHASE 1
-1. Renewal of License
-2. Change External Auditor
-3. Change of Name
-4. Equity Investment
-5. Board & Management
-6. Org. Structure
-7. Shares Transfer
-8. Share Capital
-9. Branch Expansion
-10. Penalties & Sanction
-11. Black Book
-12. Black Book Delisting
-13. Black Book Miscellaneous
-14. Annual Report
-15. License
-16. Registration
-17. Examination Report Library
-18. Request for Download
+DEFENSE IN COURT
+EXTERNAL SOLICITOR BILL SETTLEMENT
+RENDERING LEGAL OPINION
+COMPLIANCE WITH JUDGEMENT AND AWARD
+WITNESS HANDLING
+APPEAL AGAINST ADVERSE JUDGEMENTS
+DEVELOPMENT IN LAW SUITS
+INSTITUTING LAW SUIT
+OUT OF COURT SETTLEMENT DURING PROCEEDINGS IN COURT
+WRITS OF SUMMONS
+MEDIATION BEFORE INSTITUTING ACTION IN COURT
+RESPONDING TO GARNISHEE ORDER
+SUBPOENA
+DE-BRIEFING OF EXTERNAL SOLICITORS
+ALTERNATIVE DISPUTE RESOLUTION (OUT OF COURT SETTLEMENT - POST JUDGEMENT)
+CASH ADVANCE
 
-### PHASE 2: ECM 23 Processes
-**LITIGATION SUPPORT**
+CASH ADVANCE ADMINISTRATOR CHEQUES
+CASH ADVANCE SINGLE & MULTI TRIP
+CASH ADVANCE RETIRE & REIMBURSEMENT
+MEETING CO-ORDINATION (MPC/MPIC)
 
-1. DEFENSE IN COURT
-2. EXTERNAL SOLICITOR BILL SETTLEMENT
-3. RENDERING LEGAL OPINION
-4. COMPLIANCE WITH JUDGEMENT AND AWARD
-5. WITNESS HANDLING
-6. APPEAL AGAINST ADVERSE JUDGEMENTS
-7. DEVELOPMENT IN LAW SUITS
-8. INSTITUTING LAW SUIT
-9. OUT OF COURT SETTLEMENT DURING PROCEEDINGS IN COURT
-10. WRITS OF SUMMONS
-11. MEDIATION BEFORE INSTITUTING ACTION IN COURT
-12. RESPONDING TO GARNISHEE ORDER
-13. SUBPOENA
-14. DE-BRIEFING OF EXTERNAL SOLICITORS
-15. ALTERNATIVE DISPUTE RESOLUTION (OUT OF COURT SETTLEMENT - POST JUDGEMENT)
+MPC MEETING CO-ORDINATION PROCESS
+ECM-MPIC MEETING CO-ORDINATION PROCESS
+CAREER DEV. AND TRAINING
 
-**CASH ADVANCE**
-
-16. CASH ADVANCE ADMINISTRATOR CHEQUES
-17. CASH ADVANCE SINGLE & MULTI TRIP
-18. CASH ADVANCE RETIRE & REIMBURSEMENT
-
-**MEETING CO-ORDINATION (MPC/MPIC)**
-
-19. MPC MEETING CO-ORDINATION PROCESS
-20. ECM-MPIC MEETING CO-ORDINATION PROCESS
-
-**CAREER DEV. AND TRAINING**
-
-21. TRAINING MANAGEMENT
-22. CAREER DEVELOPMENT REQUEST FOR MANAGEMENT APPROVAL
-23. REQUEST FOR VERIFICATION & UPDATE OF ADDITIONAL QUALIFICATION
+TRAINING MANAGEMENT
+CAREER DEVELOPMENT REQUEST FOR MANAGEMENT APPROVAL
+REQUEST FOR VERIFICATION & UPDATE OF ADDITIONAL QUALIFICATION
