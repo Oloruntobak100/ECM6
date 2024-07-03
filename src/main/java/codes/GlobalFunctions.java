@@ -2018,14 +2018,33 @@ public class GlobalFunctions {
             }else{
                 fileHandler = new FileHandler( logFile , true);
             }
+            //
+            //logger.addHandler(fileHandler);
+            //
+            //SimpleFormatter formatter = new SimpleFormatter();
+            //fileHandler.setFormatter(formatter);
+            //logger.info(logMsg + "\n\n");
+            //fileHandler.close();
+            //fileHandler = null;
 
             logger.addHandler(fileHandler);
 
             SimpleFormatter formatter = new SimpleFormatter();
             fileHandler.setFormatter(formatter);
-            logger.info(logMsg + "\n\n");
+
+            // Sanitize the user-provided value (logMsg)
+            String sanitizedLogMsg = logMsg.replaceAll("[\r\n]", "_");
+
+            // Use parameterized logging
+            logger.info("User provided log message: {}\n\n" + sanitizedLogMsg);
+
             fileHandler.close();
             fileHandler = null;
+
+
+
+
+
 
         } catch (IOException e) {
             e.printStackTrace();
