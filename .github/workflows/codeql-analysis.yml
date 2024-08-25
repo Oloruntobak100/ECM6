@@ -3,6 +3,7 @@ on:
   push:
     branches: [ master ]
   pull_request:
+    # The branches below must be a subset of the branches above
     branches: [ master ]
   schedule:
     - cron: '0 0 * * 1' # weekly schedule
@@ -19,7 +20,8 @@ jobs:
 
     strategy:
       matrix:
-        language: [ 'java', 'javascript' ]
+        language: [ 'java', 'javascript', 'python' ]
+        # CodeQL supports [ 'cpp', 'csharp', 'go', 'java', 'javascript', 'python', 'ruby' ] and more
 
     steps:
     - name: Checkout repository
@@ -35,37 +37,3 @@ jobs:
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v2
-      with:
-        output: ./codeql-results.sarif
-
-    - name: Convert SARIF to CSV
-      run: |
-        pip install pandas
-        python -c "
-import json
-import pandas as pd
-
-with open('codeql-results.sarif', 'r') as f:
-    sarif = json.load(f)
-
-results = sarif['runs'][0]['results']
-data = []
-for result in results:
-    for location in result['locations']:
-        data.append({
-            'Rule ID': result['ruleId'],
-            'Message': result['message']['text'],
-            'Level': result.get('level', 'N/A'),
-            'File': location['physicalLocation']['artifactLocation']['uri'],
-            'Line': location['physicalLocation']['region']['startLine'],
-        })
-
-df = pd.DataFrame(data)
-df.to_csv('codeql-results.csv', index=False)
-"
-
-    - name: Upload CodeQL CSV Report
-      uses: actions/upload-artifact@v3
-      with:
-        name: codeql-results-csv
-        path: ./codeql-results.csv
