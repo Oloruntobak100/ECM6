@@ -9,7 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4ca5f815-ff6c-44b8-939c-8bca79f11641" name="Changes" comment="2. Regarding the issue of nomenclature, some terminologies are ambiguous and require change. For example, &quot;Save as Complete&quot; should be changed to &quot;Approved,&quot; and &quot;Endorse &amp; Send to Awaiting Affidavit&quot; should be changed to &quot;Reviewed&quot; under the Responding to Garnishee Order process. The &quot;Submitted to Complete&quot; narration/title in the email is also doubtful." />
+    <list default="true" id="4ca5f815-ff6c-44b8-939c-8bca79f11641" name="Changes" comment="2. Regarding the issue of nomenclature, some terminologies are ambiguous and require change. For example, &quot;Save as Complete&quot; should be changed to &quot;Approved,&quot; and &quot;Endorse &amp; Send to Awaiting Affidavit&quot; should be changed to &quot;Reviewed&quot; under the Responding to Garnishee Order process. The &quot;Submitted to Complete&quot; narration/title in the email is also doubtful.">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_06_27_2024_9_25_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_06_27_2024_9_25_AM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -54,9 +57,9 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "Merging master",
+    "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/cbnECM",
+    "last_opened_file_path": "C:/ECM6",
     "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Artifacts",
     "project.structure.proportion": "0.15",
