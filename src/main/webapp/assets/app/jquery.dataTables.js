@@ -1977,7 +1977,7 @@
 			// added to the filter wrapper if needed (submit button for example)
 			nFilter._DT_Input = jqFilter[0];
 		
-			jqFilter.val( oPreviousSearch.sSearch.replace('"','&quot;') );
+			jqFilter.val(oPreviousSearch.sSearch.replace(/"/g, '&quot;'));
 			jqFilter.bind( 'keyup.DT', function(e) {
 				/* Update all other filter input elements for the new display */
 				var n = oSettings.aanFeatures.f;
@@ -11595,11 +11595,15 @@
 		/*
 		 * html sorting (ignore html tags)
 		 */
-		"html-pre": function ( a )
-		{
-			return a.replace( /<.*?>/g, "" ).toLowerCase();
-		},
-		
+        "html-pre": function (a) {
+            let sanitized;
+            do {
+                sanitized = a;
+                a = a.replace(/<.*?>/g, "");
+            } while (a !== sanitized);
+            return a.toLowerCase();
+        },
+
 		"html-asc": function ( x, y )
 		{
 			return ((x < y) ? -1 : ((x > y) ? 1 : 0));
